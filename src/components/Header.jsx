@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <AppBar position="fixed" sx={{ bgcolor: "#ffffff" }}>
-            <Container>
+            <Container maxWidth="xl">
                 <Toolbar sx={{ justifyContent: "space-between" }}>
                     {/* Logo */}
                     <Typography variant="h6" noWrap component={Link} to="/">

@@ -6,7 +6,7 @@ export const productReducer = (state, action) => {
         case SET_PRODUCT:
             return {
                 ...state,
-                product: payload,
+                currentProduct: payload,
             };
 
         default:

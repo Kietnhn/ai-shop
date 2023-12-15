@@ -5,13 +5,13 @@ export const ProductContext = createContext();
 
 const ProductContextProvider = ({ children }) => {
     const initialState = {
-        product: null,
+        currentProduct: null,
         carts: [],
     };
 
     const [productState, dispatch] = useReducer(productReducer, initialState);
 
-    const setProduct = (payload) => {
+    const setCurrentProduct = (payload) => {
         dispatch({
             type: SET_PRODUCT,
             payload: payload,
@@ -19,7 +19,7 @@ const ProductContextProvider = ({ children }) => {
     };
     const productionContextData = {
         productState,
-        setProduct,
+        setCurrentProduct,
     };
 
     // return component

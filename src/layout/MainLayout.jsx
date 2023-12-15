@@ -7,7 +7,6 @@ import { SettingContext } from "../contexts/SettingContext";
 import ChatBox from "../components/ChatBox";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import NavBar from "../components/NavBar";
-import ProductDetailDialog from "../components/Dialog/ProductDetail";
 
 const MainLayout = ({ children }) => {
     const {
@@ -15,9 +14,9 @@ const MainLayout = ({ children }) => {
         setIsOpenChatBox,
     } = useContext(SettingContext);
     return (
-        <Container>
+        <Container maxWidth="xl">
             <Header />
-            <Container sx={{ marginTop: 8 }}>
+            <Container sx={{ marginTop: 8 }} maxWidth="xl">
                 <Box paddingTop={2} position={"relative"}>
                     <Grid container spacing={3}>
                         <Grid item xs>
@@ -55,7 +54,6 @@ const MainLayout = ({ children }) => {
             </Container>
             <LoginDialog />
             <RegisterDialog />
-            <ProductDetailDialog />
         </Container>
     );
 };
